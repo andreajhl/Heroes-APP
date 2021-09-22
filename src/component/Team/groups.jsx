@@ -20,6 +20,7 @@ export default function Groups() {
     useEffect(() => {
       setteams(Object.keys(team))
     }, [heroes,team])
+
     function handleSubmit(e){
         e.preventDefault()
         teams.includes(state) ? swal(`El equipo ${state}`, "ya existe", "error") : dispatch(addGroup(state))

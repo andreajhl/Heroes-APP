@@ -1,19 +1,25 @@
 import React from 'react';
+import {useDispatch } from 'react-redux';
 import CardHeroe from '../Heroes/cardHeroes';
 import {averagePowerstast} from '../../funciones/grupos';
 
-import '../../styles/team.scss'
+import { deleteGroup } from '../../actions';
+
+import {TiDelete} from 'react-icons/ti';
+import '../../styles/team.scss';
 
 export default function Team ({nameGroup,team}) {
-
+    const dispatch = useDispatch()
     if(team){
       var averageGroup=  averagePowerstast(team.group)      
     }
   
 
     return (
-        <div className='group_div'>
+        <>
+       {team ? <div className='group_div'>
             <div className='group_div_head'>
+                <button onClick={()=>dispatch(deleteGroup(nameGroup))} className='group_div_head_b'><TiDelete/></button>
                 <p className='group_div_head_p'>Equipo: <span className='group_div_head_span'>{nameGroup}</span> </p>
                 <p className='group_div_head_p'>integrantes: <span className='group_div_head_span'>{team.group.length}</span></p>
             </div>
@@ -38,6 +44,7 @@ export default function Team ({nameGroup,team}) {
                     }                
                 </div>                
             </div>}
-        </div>
+        </div> : <p>Cargando</p>}
+        </>
     )
 }

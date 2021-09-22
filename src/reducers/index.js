@@ -5,9 +5,10 @@ import {
     REMOVE_HEROE_GROUP,
     ADD_HEROE_GROUP,
     ADD_GROUP,
-    USER
+    USER,
+    DELETE_GROUP
 } from '../actions/index'
-import { addHeroeTeam,removeHeroeGroup, addTeam } from '../funciones/grupos';
+import { addHeroeTeam,removeHeroeGroup, addTeam, deleteTeam } from '../funciones/grupos';
 
 var localTeam = JSON.parse(window.localStorage.getItem("grupos"));
 var token=localStorage.getItem('token');
@@ -62,7 +63,13 @@ export default function cart(state = initialState, action) {
             let addNewTeam=addTeam(payload)
             return{
                 ...state,
-                team: addNewTeam
+                team:{ ...addNewTeam}
+            }
+        case DELETE_GROUP:
+            let removeTeam=deleteTeam(payload)
+            return{
+                ...state,
+                team: {...removeTeam}
             }
         case USER:
 

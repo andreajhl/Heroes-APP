@@ -56,11 +56,12 @@ export default function Login(){
                 }}
             >
                 {({errors})=>(
-                    <Form className='form' autoComplete="off">
+                    <Form className='form' >
                         <div className='form_div'>
                             <p className='form_div_p'>Email</p>
                             <Field
-                            className='form_div_i'
+                                className='form_div_i'
+                                autoComplete='username'
                                 type='email' 
                                 placeholder='correo@correo.com' 
                                 id='email' 
@@ -71,7 +72,8 @@ export default function Login(){
                         <div className='form_div'>
                             <p className='form_div_p'>Password</p>
                             <Field
-                            className='form_div_i'
+                                className='form_div_i'
+                                autoComplete='current-password'
                                 type='password' 
                                 id='password'                                
                                 name='password' 

@@ -76,6 +76,15 @@ export function addTeam(name){
     return state;
 }
 
+export function deleteTeam(name){
+
+    delete state[name]
+
+    window.localStorage.setItem("grupos",JSON.stringify(state));
+
+    return state;
+}
+
 export function averagePowerstast(group){
     let intelligence={
         number:0,

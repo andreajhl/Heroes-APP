@@ -5,6 +5,7 @@ export const REMOVE_HEROE_GROUP='REMOVE_HEROE_GROUP';
 export const ADD_HEROE_GROUP = 'ADD_HEROE_GROUP';
 export const ADD_GROUP = 'ADD_GROUP';
 export const USER = 'USER'
+export const DELETE_GROUP='DELETE_GROUP'
 
 export function getHeroe(name){
     return async function(dispatch){
@@ -68,6 +69,13 @@ export function addHeroeGroup(id,grupo){
         }
     };
 };
+
+export function deleteGroup(name){
+    return{
+        type: DELETE_GROUP,
+        payload:name
+    }
+}
 
 export function addGroup(name){
     return{
