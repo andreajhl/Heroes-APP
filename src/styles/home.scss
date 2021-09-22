@@ -1,0 +1,49 @@
+@import './global.scss';
+.home{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+
+   &_nav{
+       width: 100%;
+       height: 15%;
+       position: fixed;
+       z-index: 3;
+   };
+
+   &_div{
+       width: 100%;
+       height:100%;
+       margin-top: 8%;
+
+       @media #{$smarmini}{
+            margin-top:25%
+        };
+
+        @media #{$smarphone}{
+           margin-top:20%
+        };
+        @media #{$tablet}{
+           margin-top:15%
+        };
+
+        @media #{$desktop}{
+            margin-top:12%
+         };
+
+         @media #{$pantallaGrande}{
+            margin-top:10%
+         };
+
+         &_carousel{
+            width: 100%;
+            height: 50%;
+        };
+
+        &_groups{
+            width: 100%;
+            height: 50%;
+        };
+    };
+};

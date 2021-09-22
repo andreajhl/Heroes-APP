@@ -1,0 +1,139 @@
+@import './global.scss';
+
+.navBar{
+    width: 100%;
+    height: 100%;
+    background-color: #009cff;
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    &_form{
+        width: 100%;
+        height: 100%;
+        @include caja-flex(flex,column,center,center,nowrap);
+
+        &_div{
+            @include caja-flex(flex,row,center,center,nowrap);
+            width: 100%;
+            height: 70%;
+            position: relative;
+
+            &_button{
+                background-color: #1f1e1e;
+                border: none;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                color: white;
+                width: 20%;
+                height: 50%;
+                font-size: 3vh;
+
+                @media #{$smarmini}{
+                    font-size: 1.3ex;
+                };
+                @media #{$smarphone}{
+                    font-size: 1.8ex;
+                };
+                @media #{$tablet}{
+                    font-size: 2.2ex;
+                };
+                @media #{$desktop}{
+                    font-size: 2.5ex;
+                };
+            }
+            &_button:hover{
+                background-color:black;
+            };
+
+            &_i{
+                width: 50%;
+                height: 50%;
+                margin-right: 20%;
+                border: none;
+                padding-left: 3%;
+                font-size: 3.3vh;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                @media #{$smarmini}{
+                    font-size: 1.5ex;
+                    width: 70%;
+                    margin-right: 0%;
+                };
+
+                @media #{$smarphone}{
+                    font-size: 2ex;
+                    width: 70%;
+                    margin-right: 0%;
+                };
+
+                @media #{$tablet}{
+                    font-size: 2.4ex;
+                    margin-right: 0%;
+                    width: 70%;
+                };
+
+                @media #{$desktop}{
+                    font-size: 2.7ex;
+                };
+            };
+        };
+
+        &_error{
+            position: absolute;
+            margin: 0px;
+            top:70%;
+            left: 5%;
+            font-size: 2.5vh;
+            text-shadow: 1px 1px 10px white;
+            color: #fa3939;
+
+            @media #{$smarmini}{
+                font-size: 1.5ex;
+            };
+            @media #{$smarphone}{
+                font-size: 1.8ex;
+            };
+            @media #{$tablet}{
+                font-size: 2ex;
+            };
+            @media #{$desktop}{
+                font-size: 2.3ex;
+            };
+        };
+    };
+
+    &_close{
+        @include caja-flex(flex,column,center,center,nowrap);
+        width: 100%;
+        height: 100%;
+
+        &_button{
+            width: auto;
+            height: 35%;
+            border:none;
+            font-size: 2.8vh;
+            border-radius: 5px;
+            background-color:  #1f1e1e;
+            color: white;
+            padding-left: 5%;
+            padding-right: 5%;
+
+            @media #{$smarmini}{
+                font-size: 1.5ex;
+            };
+
+            @media #{$smarphone}{
+                font-size: 2ex;
+            };
+
+            @media #{$tablet}{
+                font-size: 2.2ex;
+            };
+
+            @media #{$desktop}{
+                font-size: 2.5ex;
+            };
+        };
+    };
+};

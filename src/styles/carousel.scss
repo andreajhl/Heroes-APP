@@ -1,0 +1,209 @@
+@import './global.scss';
+.div_Ccarousel{
+    width: 100%;
+    height: 100%;
+    background-color:#111111;
+};
+
+.carousel{
+    width: 100%;
+    height: 100%;
+
+    &-inner{
+        width: 100%;
+        height: 100%;
+    };
+
+    &-control-prev{
+        height: 20%;
+        margin-top:10%;
+
+        @media #{$smarmini}{
+            margin-top:50%
+        };
+        @media #{$smarphone}{
+            margin-top:40%
+        };
+        @media #{$tablet}{
+            margin-top:40%
+        };
+        @media #{$desktop}{
+            margin-top:20%
+        };
+        @media #{$pantallaGrande}{
+            margin-top:15%
+        };
+    };
+
+    &-control-next{
+        height: 20%;
+        margin-top:10%;
+
+        @media #{$smarmini}{
+            margin-top:50%
+        };
+
+        @media #{$smarphone}{
+            margin-top:40%
+        };
+
+        @media #{$tablet}{
+            margin-top:40%
+        };
+
+        @media #{$desktop}{
+            margin-top:20%
+        };
+
+        @media #{$pantallaGrande}{
+            margin-top:15%
+        };
+    };
+};
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+};
+
+.card_div{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    @include caja-flex(flex,column,center,center,nowrap);
+
+    &_head{
+        position: relative;
+        @include caja-flex(flex,column,center,center,nowrap);
+        width: 100%;
+        height: 100%;
+
+        &_img{
+            width: 100%;
+            height: 100%;
+
+            @media #{$desktop}{
+                width: 90%;
+             };
+             @media #{$pantallaGrande}{
+                width: 90%;
+             };
+             @media #{$pantallaExtraGrande}{
+                width: 90%;
+             };
+        };
+
+        &_Gimg{
+            width: 100%;
+            height: 100%;
+        };
+
+        &_button{
+            position: absolute;
+            top:0%;
+            margin-top: 2%;
+            left: 5%;
+            border:none;
+            background:none;
+            color:rgb(133, 7, 7);
+            font-size: 8vh;
+
+            @media #{$smarmini}{
+               font-size: 5vh;
+               margin-top: 9%;
+            };
+
+            @media #{$smarphone}{
+                font-size: 6vh;
+                margin-top: 5%;
+            };
+
+            @media #{$tablet}{
+                margin-top:3%;
+                font-size: 6vh;
+            };
+        };
+    };
+
+    &_name{
+        position: absolute;
+        bottom: 0px;
+        margin-bottom: 10%;
+        text-decoration-line: none;
+
+        &_i{
+            color: white;
+            text-shadow: 1px 1px 4px rgb(0, 0, 0);
+
+            @media #{$smarmini}{
+                font-size: 2.5ex;
+            };
+
+            @media #{$smarphone}{
+                font-size: 3ex;
+            };
+
+            @media #{$tablet}{
+                font-size: 3.5ex;
+            };
+            
+            @media #{$desktop}{
+                font-size: 4ex;
+            };           
+        };
+
+        @media #{$smarphone}{
+            margin-bottom: 8%;
+        };
+
+        @media #{$tablet}{
+            margin-bottom: 7%;
+        };
+
+        @media #{$desktop}{
+            margin-bottom: 4%;
+        }; 
+    };
+
+    &_name_i:hover{
+        color: #00a914;
+    };
+};
+
+.accordion{
+    position: absolute;
+    width: 100%;
+    bottom:0%;
+
+    &-div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#select{
+    position: absolute;
+    margin-top:3%;
+    top:0px;
+    right: 5%;
+
+    @media #{$smarmini}{
+        margin-top: 13%;
+     };
+
+     @media #{$smarphone}{
+         margin-top: 10%;
+     };
+
+     @media #{$tablet}{
+         margin-top:9%;
+     };
+
+     @media #{$desktop}{
+        margin-top:7%;
+    };
+    
+    @media #{$pantallaGrande}{
+        margin-top:5%;
+    };
+}

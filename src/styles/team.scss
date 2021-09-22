@@ -1,0 +1,155 @@
+@import './global.scss';
+.team{
+    width: 100%;
+    height: auto;
+    background-color: #222222;
+    margin-top: 20px;
+    padding-bottom: 15%;
+    @include caja-flex(flex,column,center,center,nowrap);
+
+    &_add{
+        width: 100%;
+        height: 20%;
+        padding-left:5%;
+        margin-bottom: 30px;
+
+        &_i{
+            width: 30%;
+            border: none;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            @media #{$smarmini}{
+                width: 70%;
+             };
+
+             @media #{$smarphone}{
+                width: 70%;
+             };
+
+             @media #{$tablet}{
+                width: 60%;
+             };
+        };
+
+        &_button{
+            width: 13%;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            color: rgb(66, 65, 65);
+
+            @media #{$smarmini}{
+                width: 27%;
+             };
+
+             @media #{$smarphone}{
+                width: 27%;
+             };
+
+             @media #{$tablet}{
+                width: 17%;
+             };
+        };
+    };
+
+    &_div{
+        width: 100%;
+        height: 100%;
+        background-color: #222222;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 3%;
+
+        @media #{$smarmini}{
+            @include caja-flex(flex,column,center,center,nowrap);
+        };
+
+        @media #{$smarphone}{
+            @include caja-flex(flex,column,center,center,nowrap);
+        };
+
+        @media #{$tablet}{
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+        };
+
+        @media #{$desktop}{
+            width: 90%;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+        };
+    };
+};
+
+.group_div{
+    width: 100%;
+    height: 100%;
+    background-color: #454545;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    &_head{
+        height: 10%;
+        width: 100%;
+        color: white;
+        margin-top: 3%;
+        @include caja-flex(flex,row,space-evenly,center,nowrap);
+
+        &_span{
+            color: #2fe7f3;
+            font-weight: bold;
+        };
+
+        @media #{$tablet}{
+           height: 8%;
+        };
+    };
+
+    &_body{
+       width: 100%;
+       height: auto;
+       @include caja-flex(flex,column,center,center,nowrap);
+
+       &_d1{
+           height: 35%;
+           width: 100%;
+           color: white;
+
+            &_d{
+                &-p{
+                    text-align: center;
+                    font-weight: bold;
+                };
+
+                &-1{
+                    width: 90%;
+                    height: 100%;
+                    margin-left: 10%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 3%;
+                };
+            };
+
+            &_d2{
+                height: 35%;
+                width: auto;
+                text-align: center;
+            };
+        };
+    };
+
+    @media #{$smarmini}{
+        width: 90%;
+    };
+    @media #{$smarphone}{
+        width: 90%;
+    };
+};
