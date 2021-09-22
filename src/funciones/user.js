@@ -1,5 +1,5 @@
 export async function login(email,password){
-    let loginUser= await fetch(`http://challenge-react.alkemy.org/`, {
+    let loginUser= await fetch(`https://challenge-react.alkemy.org/`, {
         method: "POST",
         headers: {
           "Accept": "application/json",
