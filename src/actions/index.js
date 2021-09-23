@@ -9,7 +9,7 @@ export const DELETE_GROUP='DELETE_GROUP'
 
 export function getHeroe(name){
     return async function(dispatch){
-        let heroe=await fetch(`https://superheroapi.com/api/10226681008392670/search/${name}`)
+        let heroe=await fetch(`https://www.superheroapi.com/api.php/10226681008392670/search/${name}`)
             heroe= await heroe.json()
            if(heroe.results){
              heroe={
@@ -27,7 +27,7 @@ export function getHeroe(name){
 
 export function getDetailsHeroe(id){
     return async function(dispatch){
-        let heroe=await fetch(`https://superheroapi.com/api/10226681008392670/${id}`)
+        let heroe=await fetch(`https://www.superheroapi.com/api.php/10226681008392670/${id}`)
             heroe= await heroe.json()
             heroe={
                 name: heroe.name,

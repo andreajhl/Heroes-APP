@@ -55,7 +55,7 @@ export default function Login(){
                     }
                 }}
             >
-                {({errors})=>(
+                {({errors, values})=>(
                     <Form className='form' >
                         <div className='form_div'>
                             <p className='form_div_p'>Email</p>
@@ -82,7 +82,7 @@ export default function Login(){
                              <ErrorMessage name='password' component={()=><p className='form_div_error'>{errors.password}</p>}/> 
                   
                         </div>
-                        {!errors.email && !errors.password && <button type='submit' className='form_button'>Enviar</button>}
+                        {!errors.email && !errors.password && values.password.length>0 && values.email.length>0 && <button type='submit' className='form_button'>Enviar</button>}
                     </Form> 
                 )}
             </Formik>

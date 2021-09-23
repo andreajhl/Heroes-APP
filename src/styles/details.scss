@@ -263,3 +263,8 @@
         @include caja-flex(flex,column,center,center,nowrap);
     };
 };
+
+.details_cargando{
+    width: 100%;
+    height: 100vh;
+}
