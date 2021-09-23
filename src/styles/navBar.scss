@@ -19,7 +19,7 @@
             position: relative;
 
             &_button{
-                background-color: #1f1e1e;
+                background-color: #201f1f;
                 border: none;
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
@@ -43,6 +43,7 @@
             }
             &_button:hover{
                 background-color:black;
+                transition: 1s
             };
 
             &_i{
@@ -52,6 +53,7 @@
                 border: none;
                 padding-left: 3%;
                 font-size: 3.3vh;
+                cursor: pointer;
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
 
@@ -114,7 +116,7 @@
             border:none;
             font-size: 2.8vh;
             border-radius: 5px;
-            background-color:  #1f1e1e;
+            background-color:   #201f1f;
             color: white;
             padding-left: 5%;
             padding-right: 5%;
@@ -134,6 +136,10 @@
             @media #{$desktop}{
                 font-size: 2.5ex;
             };
+        };
+        &_button:hover{
+            background-color:black;
+            transition: 1s
         };
     };
 };
