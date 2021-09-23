@@ -66,12 +66,12 @@
             width: 100%;
             height: 85%;
             color:rgb(238, 223, 223);
-            @include caja-flex(flex,column,center,center,nowrap);
+            @include caja-flex(flex,column,space-evenly,center,nowrap);
             
             &_name{
                 color: white;
                 text-shadow: 1px 1px 10px black;
-
+                font-size: 5vh;
                 @media #{$smarmini}{
                    font-size: 4vh;
                 };
@@ -85,41 +85,42 @@
                 };
 
                 @media #{$desktop}{
+                    font-size: 5.5vh;
                 };
             };
 
             &_good{
                 color: #41cd51bd;
-                font-size: 3vh;
+                font-size: 3.5vh;
             };
 
             &_bad{
                 color: #cd4141bd;
-                font-size: 3vh;
+                font-size: 3.5vh;
             };
 
             &_neutral{
                 color: #4151cdbd;
-                font-size: 3vh;
+                font-size: 3.5vh;
             };
 
             &_realName{
                 color: #969494;
+                font-size: 4vh;
 
                 @media #{$smarmini}{
                     font-size: 2.7vh;
                  };
 
                  @media #{$smarphone}{
-                     font-size: 3.5vh;
+                     font-size: 3vh;
                  };
 
                  @media #{$tablet}{
                      font-size: 4vh;
                  };
 
-                 @media #{$desktop}{
-                 };
+
             };
 
             &_dAlias{
@@ -127,6 +128,7 @@
                 @include caja-flex(flex,column,center,center,nowrap);
 
                 &_title{
+                    font-size: 4vh;
                     @media #{$smarmini}{
                         font-size: 3vh;
                      };
@@ -138,9 +140,6 @@
                      @media #{$tablet}{
                          font-size: 4vh;
                      };
-
-                     @media #{$desktop}{
-                     } ; 
                 };
 
                 &_d{
@@ -148,7 +147,7 @@
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     column-gap: 3%;
-
+                    font-size: 2.7vh;
                     &-p{
                         @media #{$smarmini}{
                             grid-template-columns: repeat(2, 1fr);
@@ -164,6 +163,7 @@
                             grid-template-columns: repeat(2, 1fr);
                              font-size: 3vh;
                          };
+
                     };
                 };
             };
@@ -176,7 +176,7 @@
                     display: grid;
                     grid-template-columns: repeat(3,1fr);
                     column-gap: 3%;
-
+                    font-size: 2.7vh;
                     @media #{$smarmini}{
                         grid-template-columns: repeat(2,1fr); 
                     };
@@ -203,6 +203,7 @@
             grid-template-columns: repeat(6,1fr);
             color: white;
             height: 15%;
+            text-align: center;
             padding-bottom: 10px;
 
             &_d{

@@ -14,6 +14,21 @@
         height: 100%;
     };
 
+    &-caption{
+        font-size: 4.5vh;
+        @media #{$smarmini}{
+            font-size: 3vh;
+        };
+        @media #{$smarphone}{
+            font-size: 3.5vh;
+        };
+        @media #{$tablet}{
+            font-size: 4vh;
+        };
+        @media #{$desktop}{
+            font-size: 4.5vh;
+        };
+    }
     &-control-prev{
         height: 20%;
         margin-top:10%;

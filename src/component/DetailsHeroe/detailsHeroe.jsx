@@ -9,6 +9,7 @@ import {IoSpeedometerOutline, IoArrowBackCircle} from 'react-icons/io5';
 import {GiBrain, GiMuscleUp, GiHighKick} from 'react-icons/gi';
 import {BsClockHistory} from 'react-icons/bs';
 import cargando from '../../img/cargando.gif';
+import{ OverlayTrigger, Tooltip} from 'react-bootstrap';
 import {ImPower} from 'react-icons/im';
 import '../../styles/details.scss';
 
@@ -61,30 +62,43 @@ export default function Details() {
                         </div>
                     </div>
                     <div className='details_div2_body'>
-                        <div className='details_div2_body_d-1'>
-                            <p className='details_div2_body_d_i'><GiBrain/></p>
-                            <h4 className='details_div2_body_d_t'>{intelligence}%</h4>
-                        </div>
-                        <div className='details_div2_body_d-2'>
-                            <p className='details_div2_body_d_i'><GiMuscleUp/></p>
-                            <h4 className='details_div2_body_d_t'>{strength}%</h4>
-                        </div>
-                        <div className='details_div2_body_d-3'>
-                            <p className='details_div2_body_d_i'><IoSpeedometerOutline/></p>
-                            <h4 className='details_div2_body_d_t'>{speed}%</h4>
-                        </div>
-                        <div className='details_div2_body_d-4'>
-                            <p className='details_div2_body_d_i'><BsClockHistory/></p>
-                            <h4 className='details_div2_body_d_t'>{durability}%</h4>
-                        </div>
-                        <div className='details_div2_body_d-5'>
-                            <p className='details_div2_body_d_i'><ImPower/></p>
-                            <h4 className='details_div2_body_d_t'>{power}%</h4>
-                        </div>
-                        <div className='details_div2_body_d-6'>
-                            <p className='details_div2_body_d_i'><GiHighKick/></p>
-                            <h4 className='details_div2_body_d_t'>{combat}%</h4>
-                        </div>
+                        <OverlayTrigger overlay={<Tooltip>Iteligencia</Tooltip>}>
+                            <div className='details_div2_body_d-1'>
+                                <p className='details_div2_body_d_i'><GiBrain/></p>
+                                <h4 className='details_div2_body_d_t'>{intelligence}%</h4>
+                            </div>
+                        </OverlayTrigger>
+                        <OverlayTrigger overlay={<Tooltip >Fuerza</Tooltip>}>
+                            <div className='details_div2_body_d-2'>
+                                <p className='details_div2_body_d_i'><GiMuscleUp/></p>
+                                <h4 className='details_div2_body_d_t'>{strength}%</h4>
+                            </div>
+                        </OverlayTrigger>
+                        <OverlayTrigger overlay={<Tooltip >Velocidad</Tooltip>}>
+                            <div className='details_div2_body_d-3'>
+                                <p className='details_div2_body_d_i'><IoSpeedometerOutline/></p>
+                                <h4 className='details_div2_body_d_t'>{speed}%</h4>
+                            </div>
+                        </OverlayTrigger>
+                        <OverlayTrigger overlay={<Tooltip >Durabilidad</Tooltip>}>
+                            <div className='details_div2_body_d-4'>
+                                <p className='details_div2_body_d_i'><BsClockHistory/></p>
+                                <h4 className='details_div2_body_d_t'>{durability}%</h4>
+                            </div>
+                        </OverlayTrigger>
+                        <OverlayTrigger overlay={<Tooltip >Poder</Tooltip>}>
+                            <div className='details_div2_body_d-5'>
+                                <p className='details_div2_body_d_i'><ImPower/></p>
+                                <h4 className='details_div2_body_d_t'>{power}%</h4>
+                            </div>
+                        </OverlayTrigger>
+                        <OverlayTrigger overlay={<Tooltip >Combate</Tooltip>}>
+                            <div className='details_div2_body_d-6' >
+                                <p className='details_div2_body_d_i'><GiHighKick title='combate'/></p>
+                                <h4 className='details_div2_body_d_t'>{combat}%</h4>
+                            </div>
+                        </OverlayTrigger>
+                       
                     </div>
                 </div>        
             </div>) : <img src={cargando} alt='gif superheroe' className='details_cargando'/> }

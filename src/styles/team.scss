@@ -54,12 +54,12 @@
     };
 
     &_div{
-        width: 100%;
+        width: 97%;
         height: 100%;
         background-color: #222222;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap: 3%;
+        gap: 5%;
 
         @media #{$smarmini}{
             @include caja-flex(flex,column,center,center,nowrap);
@@ -100,7 +100,8 @@
         width: 100%;
         color: white;
         margin-top: 3%;
-        @include caja-flex(flex,row,space-evenly,center,nowrap);
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
 
         &_span{
             color: #2fe7f3;
@@ -116,18 +117,22 @@
             width: auto;
             height: auto;
             color:rgb(133, 7, 7);
-            font-size: 8vh;
+            font-size: 5vh;
+            height: auto;
+            width: auto;
+            margin: 0px;
+            @include caja-flex(flex,column,initial,center,nowrap);
 
             @media #{$smarmini}{
-               font-size: 5vh;
+               font-size: 4vh;
             };
 
             @media #{$smarphone}{
-                font-size: 6vh;
+                font-size: 4vh;
             };
 
             @media #{$tablet}{
-                font-size: 6vh;
+                font-size: 4.5vh;
             };
         }
     };
