@@ -15,7 +15,7 @@ import heroe1 from '../../img/heroeLogin1.png';
 export default function Login(){
     
     const history= useHistory();
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     return (
         <div className='div_form'>
@@ -40,7 +40,7 @@ export default function Login(){
                 onSubmit={async (values, {resetForm})=>{
 
                     let loginUser=await login(values.email,values.password);
-
+                    
                     resetForm();
 
                     if(loginUser.ok){
@@ -55,6 +55,7 @@ export default function Login(){
                     }
                 }}
             >
+                
                 {({errors, values})=>(
                     <Form className='form' >
                         <div className='form_div'>

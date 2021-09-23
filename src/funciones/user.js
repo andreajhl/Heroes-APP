@@ -1,15 +1,15 @@
+import axios from 'axios';
+
 export async function login(email,password){
-    let loginUser= await fetch(`http://challenge-react.alkemy.org/`, {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-          "Content-type": "application/json; charset=utf-8",
-        },
-        body: JSON.stringify({email,password}),
-      });
-      loginUser = await loginUser.json();
+  try {
+    let loginUser= await axios.post(`http://challenge-react.alkemy.org/`, {
+      email,password
+    });
 
-      if(loginUser.error) return{ ok:true,msg:loginUser.error};
+    return loginUser.data.token
 
-      return loginUser.token
+  } catch (error) {
+
+    return Number(`${error}`.split('code')[1]) === 401 ? {ok:true,msg:'Usuario o contraseña invalidos'} : {ok:true, msg: 'Ah ocurrido un error, intente mas tarde'}
+  }
 }
