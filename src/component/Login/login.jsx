@@ -52,7 +52,7 @@ export default function Login(){
                     }else{
                         dispatch(loginState(loginUser))
                         history.push('/')
-                    }
+                    };
                 }}
             >
                 
@@ -87,8 +87,6 @@ export default function Login(){
                     </Form> 
                 )}
             </Formik>
-           
         </div>
-
-    )
-}
+    );
+};

@@ -6,7 +6,7 @@ export async function login(email,password){
       email,password
     });
 
-    return loginUser.data.token
+    return loginUser.data.token;
 
   } catch (error) {
 

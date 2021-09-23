@@ -1,13 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import {Accordion} from 'react-bootstrap';
+
 import Select, { components } from 'react-select';
+import { useDispatch } from 'react-redux';
+import {Accordion} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import { addHeroeGroup, removeHeroe, removeHeroeGroup } from '../../actions';
 
 import {TiDelete} from 'react-icons/ti';
-
 import '../../styles/carousel.scss';
 
 const controlStyles = {
@@ -16,22 +16,23 @@ const controlStyles = {
     border: '1px solid #074e0f',
     background: '#00a914',
     color: 'white',
-  };
-  const ControlComponent = props=> (
+};
+const ControlComponent = props=> (
     <div style={controlStyles}>
-      <components.IndicatorsContainer {...props} />
+        <components.IndicatorsContainer {...props} />
     </div>
-  );
+);
 
 export default function CardHeroe({props,optionsTeam,grupo}) {
 
-    const {name,id,powerstats,img}=props
-    const {intelligence, strength, speed, durability, power, combat}= powerstats
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const {name,id,powerstats,img}=props;
+    const {intelligence, strength, speed, durability, power, combat}= powerstats;
+
     function handleChange(e){
         
-        dispatch(addHeroeGroup(id,e.value))
-    }
+        dispatch(addHeroeGroup(id,e.value));
+    };
 
     return (
 
@@ -53,15 +54,15 @@ export default function CardHeroe({props,optionsTeam,grupo}) {
                     <Accordion.Body>
                     <div className='accordion-div'>
                         <p>Inteligencia: {intelligence} </p>
-                        <p>fuerza: {strength}</p>
-                        <p> velocidad: {speed}</p>
-                        <p>durabilidad: {durability}</p>
-                        <p>potencia: {power}</p>
-                        <p>combate: {combat}</p>
+                        <p>Fuerza: {strength}</p>
+                        <p>Velocidad: {speed}</p>
+                        <p>Durabilidad: {durability}</p>
+                        <p>Potencia: {power}</p>
+                        <p>Combate: {combat}</p>
                     </div>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>}
         </div>
-    )
-}
+    );
+};

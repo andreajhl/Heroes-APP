@@ -6,22 +6,21 @@ import {Formik, Form, Field,ErrorMessage} from 'formik';
 import {getHeroe} from '../../actions/index';
 import {logoutState } from '../../actions/index';
 
-
 import '../../styles/navBar.scss';
 
-
 export default function NavBar() {
-    const dispatch = useDispatch()
-    const history= useHistory()
 
+    const dispatch = useDispatch();
+    const history= useHistory();
 
     function close(){
+
         dispatch(logoutState());
         history.push('/login');
-    }
+
+    };
 
     return (
-        
         <div className='navBar'>
             <Formik 
                 initialValues={{
@@ -54,5 +53,5 @@ export default function NavBar() {
                 <button onClick={()=>close()} className='navBar_close_button'>Logout</button>
             </div>
         </div>
-    )
-}
+    );
+};

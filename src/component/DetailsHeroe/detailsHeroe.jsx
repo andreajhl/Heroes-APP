@@ -7,9 +7,9 @@ import { getDetailsHeroe } from '../../actions';
 
 import {IoSpeedometerOutline, IoArrowBackCircle} from 'react-icons/io5';
 import {GiBrain, GiMuscleUp, GiHighKick} from 'react-icons/gi';
+import{ OverlayTrigger, Tooltip} from 'react-bootstrap';
 import {BsClockHistory} from 'react-icons/bs';
 import cargando from '../../img/cargando.gif';
-import{ OverlayTrigger, Tooltip} from 'react-bootstrap';
 import {ImPower} from 'react-icons/im';
 import '../../styles/details.scss';
 
@@ -24,11 +24,13 @@ export default function Details() {
         dispatch(getDetailsHeroe(id))
     }, [dispatch,id])
 
-    const {alias, appearance, img, name, nameReal, orientation, powerstats}= details
+    const {alias, appearance, img, name, nameReal, orientation, powerstats}= details;
 
     if(details && details.name ){
-        var {intelligence, strength, speed, durability, power, combat}= powerstats
-        var {gender,height,race,weight}=  appearance      
+
+        var {intelligence, strength, speed, durability, power, combat}= powerstats;
+        var {gender,height,race,weight}=  appearance;
+
     }
 
     return (
@@ -62,7 +64,7 @@ export default function Details() {
                         </div>
                     </div>
                     <div className='details_div2_body'>
-                        <OverlayTrigger overlay={<Tooltip>Iteligencia</Tooltip>}>
+                        <OverlayTrigger overlay={<Tooltip>Inteligencia</Tooltip>}>
                             <div className='details_div2_body_d-1'>
                                 <p className='details_div2_body_d_i'><GiBrain/></p>
                                 <h4 className='details_div2_body_d_t'>{intelligence}%</h4>

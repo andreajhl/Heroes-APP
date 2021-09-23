@@ -1,17 +1,17 @@
 import React,{useEffect, useState} from 'react';
 import { useSelector } from 'react-redux';
-import CardHeroe from './cardHeroes';
 import { Carousel } from 'react-bootstrap';
+import CardHeroe from './cardHeroes';
 
+import folleto from '../../img/heroesApp.png';
 import '../../styles/carousel.scss';
-import folleto from '../../img/heroesApp.png'
 
 export default function Heroes () {
 
-    const heroes = useSelector(state => state.heroes)
-    const team = useSelector(state => state.team)
-    const [state, setstate] = useState('')
-    const [optionsTeam, setOptionsTeam]= useState('')
+    const [optionsTeam, setOptionsTeam]= useState('');
+    const heroes = useSelector(state => state.heroes);
+    const team = useSelector(state => state.team);
+    const [state, setstate] = useState('');
 
     useEffect(() => {
         setstate(heroes)
@@ -19,10 +19,10 @@ export default function Heroes () {
        
         for (const i in team) {
             if (team[i].group.length<6)option.push({value:i,label:i})
-        }            
+        };           
         
+      setOptionsTeam(option);
 
-      setOptionsTeam(option)
     }, [heroes,team]);
 
     return (
@@ -32,5 +32,5 @@ export default function Heroes () {
             </Carousel> :<img src={folleto} alt='folleto heroes' style={{width:'100%',height:'90%'}} /> }       
         </div>
 
-    )
-}
+    );
+};

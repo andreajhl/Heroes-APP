@@ -10,22 +10,26 @@ import Team from './team';
 
 export default function Groups() {
 
-    const dispatch = useDispatch()
-    const heroes = useSelector(state=>state.heroes)
-    const team = useSelector(state => state.team)
+    const heroes = useSelector(state=>state.heroes);
+    const team = useSelector(state => state.team);
+    const dispatch = useDispatch();
 
-    const [state, setstate] = useState('')
-    const [teams, setteams] = useState('')
+    const [state, setstate] = useState('');
+    const [teams, setteams] = useState('');
 
     useEffect(() => {
-      setteams(Object.keys(team))
+
+      setteams(Object.keys(team));
+
     }, [heroes,team])
 
     function handleSubmit(e){
-        e.preventDefault()
-        teams.includes(state) ? swal(`El equipo ${state}`, "ya existe", "error") : dispatch(addGroup(state))
-        setstate('')
-    }
+
+        e.preventDefault();
+        teams.includes(state) ? swal(`El equipo ${state}`, "ya existe", "error") : dispatch(addGroup(state));
+        setstate('');
+
+    };
 
     return (
         <div className='team'>
@@ -39,5 +43,5 @@ export default function Groups() {
                 }
             </div>
         </div>
-    )
-}
+    );
+};

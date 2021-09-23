@@ -9,15 +9,19 @@ import {TiDelete} from 'react-icons/ti';
 import '../../styles/team.scss';
 
 export default function Team ({nameGroup,team}) {
-    const dispatch = useDispatch()
+
+    const dispatch = useDispatch();
+
     if(team){
-      var averageGroup=  averagePowerstast(team.group)      
-    }
+
+      var averageGroup=  averagePowerstast(team.group);   
+
+    };
   
 
     return (
         <>
-       {team ? <div className='group_div'>
+       {team && <div className='group_div'>
             <div className='group_div_head'>
                 <button onClick={()=>dispatch(deleteGroup(nameGroup))} className='group_div_head_b'><TiDelete/></button>
                 <p className='group_div_head_p'>Equipo: <span className='group_div_head_span'>{nameGroup}</span> </p>
@@ -44,7 +48,7 @@ export default function Team ({nameGroup,team}) {
                     }                
                 </div>                
             </div>}
-        </div> : <p>Cargando</p>}
+        </div> }
         </>
-    )
-}
+    );
+};
